@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Movie } from 'src/app/models/movie';
 
 @Component({
   selector: 'app-getmovies',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./getmovies.component.scss']
 })
 export class GetmoviesComponent implements OnInit {
+
+  matchedMovies: Movie[] = []
 
   constructor() { }
 
@@ -16,8 +19,23 @@ export class GetmoviesComponent implements OnInit {
 
     console.log(titleToSearch);
     
+    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=5ed1c386&s=" + titleToSearch).then((response)=>response.json()
+    ).then((data)=>{
 
-    // fetch title
+      console.log(data.Search[0]);
+
+      //this.matchedMovies = data.Search;
+
+      let searchResult = data.Search;
+
+      for (let i = 0; i < searchResult.length; i++) {
+        const thisFilm = searchResult[i];
+
+        this.matchedMovies.push(new Movie(thisFilm.Title,thisFilm.Poster,thisFilm.Year))
+        
+      }
+
+    })
 
   }
 
