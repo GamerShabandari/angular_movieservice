@@ -3,23 +3,45 @@
 </header>
 
 <main>
-<div class="searchContainer">
+<section class="searchContainer">
     <input #searchInput type="text" placeholder="type movie title">
     <button (click)="movieSearch(searchInput.value)">Search</button>
-</div>
+</section>
 
-<div class="resultsContainer">
+<section class="resultsContainer" *ngIf="matchedMovies.length > 0">
 
-    <div *ngFor="let movie of matchedMovies" [class]="filmcontainer" (click)="renderMovieDetails(movie.title)">
+    <article *ngFor="let movie of matchedMovies" [class]="filmcontainer" (click)="renderMovieDetails(movie.title)">
         <p>{{movie.title}}</p>
     
         <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
     
         <p>{{movie.year}}</p>
-    </div>
+    </article>
 
 
-</div>
+</section>
+
+<section class="detailsContainer" *ngIf="detailsContainerStatus">
+
+    <h2>{{detailedMovie.title}}</h2>
+    
+    <img src="{{detailedMovie.poster}}" alt="movie poster of {{detailedMovie.title}}">
+
+    <h3>{{detailedMovie.ratings}}</h3>
+
+    <h3>{{detailedMovie.plot}}</h3>
+
+    <h3>{{detailedMovie.runtime}}</h3>
+
+    <h3>{{detailedMovie.year}}</h3>
+
+    <h3>{{detailedMovie.genre}}</h3>
+
+    <h3>{{detailedMovie.director}}</h3>
+
+    <h3>{{detailedMovie.rated}}</h3>
+
+</section>
 
 
 
