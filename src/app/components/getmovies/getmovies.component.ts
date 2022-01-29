@@ -43,7 +43,16 @@ export class GetmoviesComponent implements OnInit {
 
   renderMovieDetails(movieTitle:string){
 
-    
+    console.log(movieTitle);
+
+    fetch("http://www.omdbapi.com/?t="+movieTitle+"&apikey=5ed1c386&s").then((response)=>response.json()
+    ).then((data)=>{
+
+      console.log(data);
+      
+
+    })
+
   }
 
 }
