@@ -10,6 +10,8 @@ export class GetmoviesComponent implements OnInit {
 
   matchedMovies: Movie[] = []
 
+  filmcontainer:string = "filmcontainer"
+
   constructor() { }
 
   ngOnInit(): void {
@@ -37,6 +39,11 @@ export class GetmoviesComponent implements OnInit {
 
     })
 
+  }
+
+  renderMovieDetails(movieTitle:string){
+
+    
   }
 
 }

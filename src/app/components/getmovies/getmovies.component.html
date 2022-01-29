@@ -8,12 +8,19 @@
     <button (click)="movieSearch(searchInput.value)">Search</button>
 </div>
 
-<div *ngFor="let movie of matchedMovies">
-    <p>{{movie.title}}</p>
+<div class="resultsContainer">
 
-    <img src="{{movie.poster}}" alt="">
+    <div *ngFor="let movie of matchedMovies" [class]="filmcontainer" (click)="renderMovieDetails(movie.title)">
+        <p>{{movie.title}}</p>
+    
+        <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
+    
+        <p>{{movie.year}}</p>
+    </div>
 
-    <p>{{movie.year}}</p>
+
 </div>
+
+
 
 </main>
