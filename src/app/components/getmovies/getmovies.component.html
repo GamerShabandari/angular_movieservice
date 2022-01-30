@@ -3,56 +3,55 @@
 </header>
 
 <main>
-<section class="searchContainer">
-    <input #searchInput type="text" placeholder="search movie title">
-    <button (click)="movieSearch(searchInput.value)">Search</button>
-</section>
+    <section class="searchContainer">
+        <input #searchInput type="text" placeholder="search movie title">
+        <button (click)="movieSearch(searchInput.value)">Search</button>
+    </section>
 
-<section class="resultsContainer" *ngIf="matchedMovies.length > 0">
+    <section class="resultsContainer" *ngIf="matchedMovies.length > 0">
 
-    <article *ngFor="let movie of matchedMovies" [class]="filmcontainer" (click)="renderMovieDetails(movie.title)">
-        <h2>{{movie.title}}</h2>
-    
-        <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
-    
-        <h3>{{movie.year}}</h3>
-    </article>
+        <article *ngFor="let movie of matchedMovies" [class]="filmcontainer" (click)="renderMovieDetails(movie.title)">
+            <h2>{{movie.title}}</h2>
 
+            <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
 
-</section>
-
-<section class="detailsContainer" *ngIf="detailsContainerStatus">
-
-    <div class="detailsPoster">
-
-        <img src="{{detailedMovie.poster}}" alt="movie poster of {{detailedMovie.title}}">
-
-    </div>
-
-    <aside class="detailsText">
-
-        <h2>{{detailedMovie.title}}</h2>
-
-        <h4>Ratings: {{detailedMovie.ratings}}</h4>
-    
-        <h3>Plot: {{detailedMovie.plot}}</h3>
-    
-        <h4>Runtime: {{detailedMovie.runtime}}</h4>
-    
-        <h4>Released: {{detailedMovie.year}}</h4>
-    
-        <h4>Genre: {{detailedMovie.genre}}</h4>
-    
-        <h4>Director: {{detailedMovie.director}}</h4>
-    
-        <h4>Rated: {{detailedMovie.rated}}</h4>
+        </article>
 
 
-    </aside>
+    </section>
 
-   
+    <section class="detailsContainer" *ngIf="detailsContainerStatus">
 
-</section>
+        <div class="detailsPoster">
+
+            <img src="{{detailedMovie.poster}}" alt="movie poster of {{detailedMovie.title}}">
+
+        </div>
+
+        <aside class="detailsText">
+
+            <h2>{{detailedMovie.title}}</h2>
+
+            <h4> <strong> <em> Ratings: </em> </strong> {{detailedMovie.ratings}}</h4>
+
+            <h3> <strong> <em> Plot: </em> </strong> {{detailedMovie.plot}}</h3>
+
+            <h4> <strong> <em> Runtime: </em> </strong> {{detailedMovie.runtime}}</h4>
+
+            <h4> <strong> <em> Released: </em> </strong> {{detailedMovie.year}}</h4>
+
+            <h4> <strong> <em> Genre: </em> </strong> {{detailedMovie.genre}}</h4>
+
+            <h4> <strong> <em> Director: </em> </strong> {{detailedMovie.director}}</h4>
+
+            <h4> <strong> <em> Rated: </em> </strong> {{detailedMovie.rated}}</h4>
+
+
+        </aside>
+
+
+
+    </section>
 
 
 
