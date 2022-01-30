@@ -1,11 +1,25 @@
 <header>
     <h1>Flixster</h1>
+
+    <button (click)="renderFavorites()">♡</button>
 </header>
 
 <main>
     <section class="searchContainer">
         <input #searchInput type="text" placeholder="search movie title">
         <button (click)="movieSearch(searchInput.value)">Search</button>
+    </section>
+
+    <section *ngIf="showFavorites===true" class="savedMovies">
+
+        <div class="favoritesContainer" *ngFor="let movie of mySavedMovies">
+
+            <h4>{{movie.title}}</h4>
+
+            <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
+
+        </div>
+
     </section>
 
     <section class="resultsContainer" *ngIf="matchedMovies.length > 0">
@@ -46,13 +60,13 @@
 
             <h4> <strong> <em> Rated: </em> </strong> {{detailedMovie.rated}}</h4>
 
+            <button (click)="saveFavoriteMovies(detailedMovie)">Save for later</button>
+
 
         </aside>
 
 
 
     </section>
-
-
 
 </main>

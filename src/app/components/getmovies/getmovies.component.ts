@@ -9,6 +9,8 @@ import { movieDetails } from 'src/app/models/movieDetails';
 })
 export class GetmoviesComponent implements OnInit {
 
+  /////////////////////////////////////////////
+
   matchedMovies: Movie[] = []
 
   detailedMovie: movieDetails = new movieDetails("", "", "", "", "", "", "", "", "")
@@ -17,10 +19,22 @@ export class GetmoviesComponent implements OnInit {
 
   detailsContainerStatus: boolean = false
 
+  mySavedMovies: movieDetails[] = []
+
+  showFavorites:boolean = false;
+
+
+  /////////////////////////////////////////////
+
+
   constructor() { }
+
+  /////////////////////////////////////////////
 
   ngOnInit(): void {
   }
+
+  /////////////////////////////////////////////
 
   movieSearch(titleToSearch: string) {
 
@@ -46,6 +60,8 @@ export class GetmoviesComponent implements OnInit {
 
   }
 
+  /////////////////////////////////////////////
+
   renderMovieDetails(movieTitle: string) {
 
     this.detailsContainerStatus = true
@@ -61,6 +77,20 @@ export class GetmoviesComponent implements OnInit {
 
     })
 
+  }
+
+  saveFavoriteMovies(movieToSaveForLater:movieDetails){
+
+    this.mySavedMovies.push(movieToSaveForLater);
+    
+  }
+
+  renderFavorites(){
+
+    this.matchedMovies = []
+    
+    this.showFavorites = !this.showFavorites;
+  
   }
 
 }
