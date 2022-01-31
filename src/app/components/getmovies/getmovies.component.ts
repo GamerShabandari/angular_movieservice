@@ -21,7 +21,7 @@ export class GetmoviesComponent implements OnInit {
 
   mySavedMovies: movieDetails[] = []
 
-  showFavorites:boolean = false;
+  showFavorites: boolean = false;
 
 
   /////////////////////////////////////////////
@@ -79,26 +79,22 @@ export class GetmoviesComponent implements OnInit {
 
   }
 
-  saveFavoriteMovies(movieToSaveForLater:movieDetails){
+  saveFavoriteMovies(movieToSaveForLater: movieDetails) {
 
     this.mySavedMovies.push(movieToSaveForLater);
-    
+
   }
 
-  renderFavorites(){
+  renderFavorites() {
 
-    this.matchedMovies = []
-    
     this.showFavorites = !this.showFavorites;
-  
+
   }
 
-  deleteFavorite(indexToDelete:number){
-
-    console.log(indexToDelete);
+  deleteFavorite(indexToDelete: number) {
 
     this.mySavedMovies.splice(indexToDelete, 1);
-    
+
 
   }
 
