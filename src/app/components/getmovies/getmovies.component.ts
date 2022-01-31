@@ -93,4 +93,13 @@ export class GetmoviesComponent implements OnInit {
   
   }
 
+  deleteFavorite(indexToDelete:number){
+
+    console.log(indexToDelete);
+
+    this.mySavedMovies.splice(indexToDelete, 1);
+    
+
+  }
+
 }

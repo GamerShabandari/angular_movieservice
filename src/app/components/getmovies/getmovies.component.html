@@ -1,5 +1,5 @@
 <header>
-    <h1>Flixster</h1>
+    <h1>Flixster🎞</h1>
 
     <button (click)="renderFavorites()">♡</button>
 </header>
@@ -12,11 +12,13 @@
 
     <section *ngIf="showFavorites===true" class="savedMovies">
 
-        <div class="favoritesContainer" *ngFor="let movie of mySavedMovies">
+        <div class="favoritesContainer" *ngFor="let movie of mySavedMovies; let i=index">
 
             <h4>{{movie.title}}</h4>
 
             <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
+
+            <div class="deleteBtn" (click)="deleteFavorite(i)">X</div>
 
         </div>
 
