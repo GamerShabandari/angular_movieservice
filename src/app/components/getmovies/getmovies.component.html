@@ -7,7 +7,7 @@
 <main>
     <section class="searchContainer">
         <input #searchInput type="text" placeholder="search movie title">
-        <button (click)="movieSearch(searchInput.value)">Search</button>
+        <button (click)="movieSearch(searchInput.value)">🔍</button>
     </section>
 
     <section *ngIf="showFavorites===true" class="savedMovies">
@@ -60,7 +60,7 @@
 
             <h4> <strong> <em> Rated: </em> </strong> {{detailedMovie.rated}}</h4>
 
-            <button (click)="saveFavoriteMovies(detailedMovie)">Save for later</button>
+            <button (click)="saveFavoriteMovies(detailedMovie)">♡</button>
 
 
         </aside>
