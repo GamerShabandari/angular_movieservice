@@ -40,7 +40,7 @@ export class GetmoviesComponent implements OnInit {
 
     this.detailsContainerStatus = false
 
-    fetch("http://www.omdbapi.com/?i=tt3896198&apikey=5ed1c386&s=" + titleToSearch).then((response) => response.json()
+    fetch("https://www.omdbapi.com/?i=tt3896198&apikey=5ed1c386&s=" + titleToSearch).then((response) => response.json()
     ).then((data) => {
 
       this.detailedMovie = new movieDetails("", "", "", "", "", "", "", "", "")
@@ -66,7 +66,7 @@ export class GetmoviesComponent implements OnInit {
 
     this.detailsContainerStatus = true
 
-    fetch("http://www.omdbapi.com/?t=" + movieTitle + "&apikey=5ed1c386&s").then((response) => response.json()
+    fetch("https://www.omdbapi.com/?t=" + movieTitle + "&apikey=5ed1c386&s").then((response) => response.json()
     ).then((data) => {
 
       let selectedMovie = data;
