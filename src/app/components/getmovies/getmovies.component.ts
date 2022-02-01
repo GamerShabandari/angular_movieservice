@@ -91,7 +91,7 @@ export class GetmoviesComponent implements OnInit {
 
   }
 
-  deleteFavorite(indexToDelete: number) {
+  updateFavorites(indexToDelete:number){
 
     this.mySavedMovies.splice(indexToDelete, 1);
 

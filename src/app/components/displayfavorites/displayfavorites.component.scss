@@ -1,0 +1,62 @@
+.favoritesContainer{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    transition: all;
+    transition-duration: 0.3s;
+    background-image: linear-gradient(0deg, #0c0e0ee7 0%, #f3f3f31e 100%);
+    border-radius: 15px;
+    border: 1px solid black;
+
+        &:hover {
+            scale: 1.1;
+            border: 1px solid rgba(240, 255, 255, 0.795);
+        }
+
+
+    img{
+        
+        height: 140px;
+        overflow: hidden;
+        padding: 0;
+        margin-top: 8px;
+        border-radius: 15px;
+    }
+    h4{
+        //padding: 5px;
+        margin: 8px;
+        font-size:1rem;
+        font-weight: lighter;
+        color: rgba(240, 255, 255, 0.774);
+        width: 90%;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .deleteBtn{
+        font-size: 1rem;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: rgba(240, 255, 255, 0.801);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        transition: all;
+        transition-duration: 0.3s;
+        margin: 8px;
+
+            &:hover{
+                color: rgba(202, 35, 105, 0.747);
+            }
+
+    }
+}
