@@ -101,7 +101,7 @@ header {
     min-height: 10vh;
     height: fit-content;
     width: 100vw;
-    background-color: azure;
+    background-color: rgb(0, 0, 0);
     padding: 20px;
 }
 
@@ -115,6 +115,12 @@ header {
     overflow: hidden;
     transition: all;
     transition-duration: 0.3s;
+    background-image: linear-gradient(0deg, #0c0e0ee7 0%, #f3f3f31e 100%);
+    border-radius: 15px;
+
+        &:hover {
+            scale: 1.1;
+        }
 
 
     img{
@@ -124,17 +130,21 @@ header {
         margin-top: 8px;
     }
     h4{
-        padding: 0;
+        padding: 5px;
         margin: 0;
         font-size:1rem;
-        color: darkslategray;
+        font-weight: lighter;
+        color: rgba(240, 255, 255, 0.774);
+        width: 90%;
+        overflow: hidden;
+        text-align: center;
     }
 
     .deleteBtn{
         font-size: 1rem;
-        border: 2px solid azure;
-        background-color: indianred;
-        color: azure;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        color: rgba(240, 255, 255, 0.801);
         font-family: Arial, Helvetica, sans-serif;
         font-weight: lighter;
         text-align: center;
@@ -145,14 +155,12 @@ header {
         height: 15px;
         transition: all;
         transition-duration: 0.3s;
-        border-radius: 50%;
+       
         padding: 5px;
         margin-top: 8px;
 
             &:hover{
-
-                border: 2px solid darkslategray;
-                color: darkslategray;
+                color: rgba(202, 35, 105, 0.747);
             }
 
     }
@@ -174,37 +182,41 @@ header {
 
 .filmcontainer{
     
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    width: 180px;
-    height: 290px;
+    gap: 10px;
+    width: 200px;
+    height: 310px;
     padding: 5px;
     overflow: hidden;
-    border: 1px solid black;
     border-radius: 15px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: azure;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: lighter;
-    font-size: 0.5rem;
+    background-image: linear-gradient(0deg, #0c0e0ee7 0%, #f3f3f31e 100%);
     transition: all;
     transition-duration: 0.3s;
 
     &:hover {
-        border: 1px solid azure;
         scale: 1.1;
+        background-image: linear-gradient(0deg, #0c0e0ee7 0%, #f3f3f39c 100%);
     }
 
     & img {
-        height: 200px;
+        height: 250px;
+        margin-bottom: 10px;
+        border-radius: 15px;
     }
 
     & h2 {
-        letter-spacing: 4px;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
         font-weight: lighter;
+        color: rgba(240, 255, 255, 0.801);
+        width: 100%;
+        overflow: hidden;
+        margin: 0%;
     }
 
     & h3 {
@@ -229,22 +241,17 @@ header {
     color: azure;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
+    background-image: linear-gradient(0deg, #0c0e0eef 0%, #f3f3f300 100%);
 
     & .detailsPoster {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-        border: 2px solid rgba(0, 0, 0, 0.6);
         border-radius: 15px;
         overflow: hidden;
         transition: all;
         transition-duration: 0.3s;
-        
-        &:hover {
-
-            scale: 1.2;
-        }
     }
 
     & .detailsText {
@@ -252,12 +259,18 @@ header {
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 30px;
         max-width: 40%;
         max-height: 100%;
         background-color: rgba(0, 0, 0, 0.6);
-        border: 2px solid rgba(0, 0, 0, 0.6);
         border-radius: 15px;
+
+        .line{
+            width: 80%;
+            height: 2px;
+            background-color: rgba(240, 255, 255, 0.712);
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
 
         & h2 {
             
@@ -288,7 +301,7 @@ header {
         }
 
         button{
-            margin-top: 20px;
+            margin: 20px;
             display: flex;
             justify-content: center;
             align-items: center;

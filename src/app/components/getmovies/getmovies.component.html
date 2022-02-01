@@ -18,7 +18,7 @@
 
             <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
 
-            <div class="deleteBtn" (click)="deleteFavorite(i)">X</div>
+            <button class="deleteBtn" (click)="deleteFavorite(i)">x</button>
 
         </div>
 
@@ -48,9 +48,15 @@
 
             <h2>{{detailedMovie.title}}</h2>
 
+            <div class="line"></div>
+
             <h4> <strong> <em> Ratings: </em> </strong> {{detailedMovie.ratings}}</h4>
 
+            <div class="line"></div>
+
             <h3> <strong> <em> Plot: </em> </strong> {{detailedMovie.plot}}</h3>
+
+            <div class="line"></div>
 
             <h4> <strong> <em> Runtime: </em> </strong> {{detailedMovie.runtime}}</h4>
 
@@ -61,6 +67,8 @@
             <h4> <strong> <em> Director: </em> </strong> {{detailedMovie.director}}</h4>
 
             <h4> <strong> <em> Rated: </em> </strong> {{detailedMovie.rated}}</h4>
+
+            <div class="line"></div>
 
             <button (click)="saveFavoriteMovies(detailedMovie)">♡</button>
 
