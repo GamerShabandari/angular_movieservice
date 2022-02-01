@@ -82,6 +82,21 @@ export class GetmoviesComponent implements OnInit {
 
   saveFavoriteMovies(movieToSaveForLater: movieDetails) {
 
+    if (this.mySavedMovies.length > 0) {
+
+      for (let i = 0; i < this.mySavedMovies.length; i++) {
+        const title = this.mySavedMovies[i].title;
+
+        if (title === movieToSaveForLater.title) {
+
+          return
+
+        }
+
+      }
+
+    }
+
     this.mySavedMovies.push(movieToSaveForLater);
 
   }
@@ -92,7 +107,7 @@ export class GetmoviesComponent implements OnInit {
 
   }
 
-  updateFavorites(indexToDelete:number){
+  updateFavorites(indexToDelete: number) {
 
     this.mySavedMovies.splice(indexToDelete, 1);
 
