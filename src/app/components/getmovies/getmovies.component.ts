@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from 'src/app/models/movie';
 import { movieDetails } from 'src/app/models/movieDetails';
+import 'animate.css';
 
 @Component({
   selector: 'app-getmovies',
