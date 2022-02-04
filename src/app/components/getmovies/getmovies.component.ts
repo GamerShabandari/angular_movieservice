@@ -20,9 +20,14 @@ export class GetmoviesComponent implements OnInit {
 
   detailsContainerStatus: boolean = false
 
-  mySavedMovies: movieDetails[] = []
+  //mySavedMovies: movieDetails[] = []
 
   showFavorites: boolean = false;
+
+
+  //myFavoriteMoviesSerialized:any
+
+  mySavedMovies: movieDetails[] = []
 
 
   /////////////////////////////////////////////
@@ -33,6 +38,21 @@ export class GetmoviesComponent implements OnInit {
   /////////////////////////////////////////////
 
   ngOnInit(): void {
+
+     let myFavoriteMoviesSerialized = localStorage.getItem("myFavorites");
+
+     if (myFavoriteMoviesSerialized) {
+
+      this.mySavedMovies = JSON.parse(localStorage.getItem("myFavorites") || '[]');
+       
+     } else {
+
+      let myFavoriteMovies: movieDetails[] = []
+
+      localStorage.setItem("myFavorites", JSON.stringify(myFavoriteMovies));
+
+     }
+
 
   }
 
@@ -83,6 +103,29 @@ export class GetmoviesComponent implements OnInit {
 
   saveFavoriteMovies(movieToSaveForLater: movieDetails) {
 
+    // let myFavoriteMoviesSerialized = localStorage.getItem("myFavorites");
+
+    // if (myFavoriteMoviesSerialized) {
+
+    //   let myFavoriteMoviesDeserialized: movieDetails[] = JSON.parse(localStorage.getItem("myFavorites"));
+
+    //   console.log("fanns något sparat här sedan innan");
+      
+      
+    // }else{
+
+    //   let myFavoriteMovies: movieDetails[] = []
+
+    //   localStorage.setItem("myFavorites", JSON.stringify(myFavoriteMovies));
+
+
+    //   console.log("fanns inget sparat, skapar 1a nu");
+      
+
+    // }
+
+    
+
     if (this.mySavedMovies.length > 0) {
 
       for (let i = 0; i < this.mySavedMovies.length; i++) {
@@ -99,6 +142,26 @@ export class GetmoviesComponent implements OnInit {
     }
 
     this.mySavedMovies.push(movieToSaveForLater);
+    localStorage.setItem("myFavorites", JSON.stringify(this.mySavedMovies));
+
+    
+
+    // if (this.mySavedMovies.length > 0) {
+
+    //   for (let i = 0; i < this.mySavedMovies.length; i++) {
+    //     const title = this.mySavedMovies[i].title;
+
+    //     if (title === movieToSaveForLater.title) {
+
+    //       return
+
+    //     }
+
+    //   }
+
+    // }
+
+    // this.mySavedMovies.push(movieToSaveForLater);
 
   }
 
