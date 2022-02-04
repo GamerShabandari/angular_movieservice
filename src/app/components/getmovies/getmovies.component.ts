@@ -103,29 +103,6 @@ export class GetmoviesComponent implements OnInit {
 
   saveFavoriteMovies(movieToSaveForLater: movieDetails) {
 
-    // let myFavoriteMoviesSerialized = localStorage.getItem("myFavorites");
-
-    // if (myFavoriteMoviesSerialized) {
-
-    //   let myFavoriteMoviesDeserialized: movieDetails[] = JSON.parse(localStorage.getItem("myFavorites"));
-
-    //   console.log("fanns något sparat här sedan innan");
-      
-      
-    // }else{
-
-    //   let myFavoriteMovies: movieDetails[] = []
-
-    //   localStorage.setItem("myFavorites", JSON.stringify(myFavoriteMovies));
-
-
-    //   console.log("fanns inget sparat, skapar 1a nu");
-      
-
-    // }
-
-    
-
     if (this.mySavedMovies.length > 0) {
 
       for (let i = 0; i < this.mySavedMovies.length; i++) {
@@ -144,25 +121,6 @@ export class GetmoviesComponent implements OnInit {
     this.mySavedMovies.push(movieToSaveForLater);
     localStorage.setItem("myFavorites", JSON.stringify(this.mySavedMovies));
 
-    
-
-    // if (this.mySavedMovies.length > 0) {
-
-    //   for (let i = 0; i < this.mySavedMovies.length; i++) {
-    //     const title = this.mySavedMovies[i].title;
-
-    //     if (title === movieToSaveForLater.title) {
-
-    //       return
-
-    //     }
-
-    //   }
-
-    // }
-
-    // this.mySavedMovies.push(movieToSaveForLater);
-
   }
 
   renderFavorites() {
@@ -174,8 +132,8 @@ export class GetmoviesComponent implements OnInit {
   updateFavorites(indexToDelete: number) {
 
     this.mySavedMovies.splice(indexToDelete, 1);
-
-
+    localStorage.setItem("myFavorites", JSON.stringify(this.mySavedMovies));
+    
   }
 
 }
