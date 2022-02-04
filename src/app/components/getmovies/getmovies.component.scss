@@ -135,7 +135,7 @@ header {
     gap: 10px;
     width: 200px;
     height: 310px;
-    padding: 5px;
+    padding: 15px;
     overflow: hidden;
     border-radius: 15px;
     background-image: linear-gradient(0deg, #0c0e0ee7 0%, #f3f3f31e 100%);
@@ -149,7 +149,6 @@ header {
 
     & img {
         height: 250px;
-        margin-bottom: 10px;
         border-radius: 15px;
     }
 
@@ -161,12 +160,6 @@ header {
         width: 100%;
         overflow: hidden;
         margin: 0%;
-    }
-
-    & h3 {
-        letter-spacing: 2px;
-        font-size: 0.4rem;
-        font-weight: lighter;
     }
 }
 

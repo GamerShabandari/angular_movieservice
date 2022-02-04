@@ -20,12 +20,7 @@ export class GetmoviesComponent implements OnInit {
 
   detailsContainerStatus: boolean = false
 
-  //mySavedMovies: movieDetails[] = []
-
   showFavorites: boolean = false;
-
-
-  //myFavoriteMoviesSerialized:any
 
   mySavedMovies: movieDetails[] = []
 
@@ -52,7 +47,6 @@ export class GetmoviesComponent implements OnInit {
       localStorage.setItem("myFavorites", JSON.stringify(myFavoriteMovies));
 
      }
-
 
   }
 
@@ -133,7 +127,7 @@ export class GetmoviesComponent implements OnInit {
 
     this.mySavedMovies.splice(indexToDelete, 1);
     localStorage.setItem("myFavorites", JSON.stringify(this.mySavedMovies));
-    
+
   }
 
 }
