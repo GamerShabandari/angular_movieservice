@@ -102,13 +102,8 @@ header {
     min-height: 10vh;
     height: fit-content;
     width: 100vw;
-    outline: 1px solid black;
-
-    background: rgb(0,0,0);
-    background: -moz-radial-gradient(circle, rgba(0,0,0,1) 9%, rgba(31,52,52,1) 72%);
-    background: -webkit-radial-gradient(circle, rgba(0,0,0,1) 9%, rgba(31,52,52,1) 72%);
-    background: radial-gradient(circle, rgba(0,0,0,1) 9%, rgba(31,52,52,1) 72%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#1f3434",GradientType=1);
+    
+    background-color: rgba(0, 0, 0, 0.692);
     padding: 20px;
 }
 

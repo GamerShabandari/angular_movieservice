@@ -1,16 +1,16 @@
 <header>
-    <h1>Flixster🎞</h1>
+    <h1 class="animate__animated animate__backInDown">Flixster🎞</h1>
 
-    <button (click)="renderFavorites()">♡</button>
+    <button class="animate__animated animate__zoomIn animate__delay-1s" (click)="renderFavorites()">♡</button>
 </header>
 
 
 <main>
 
-
+    
     <section class="searchContainer">
-        <input #searchInput type="text" placeholder="search movie title">
-        <button (click)="movieSearch(searchInput.value)">🔍</button>
+        <input class="animate__animated animate__zoomIn animate__delay-1s" #searchInput type="text" placeholder="search movie title">
+        <button class="animate__animated animate__zoomIn animate__delay-1s" (click)="movieSearch(searchInput.value)">🔍</button>
     </section>
 
 
@@ -23,30 +23,29 @@
 
 
 
-    <section class="resultsContainer" *ngIf="matchedMovies.length > 0">
+    <section class="resultsContainer animate__animated animate__fadeIn" *ngIf="matchedMovies.length > 0">
 
         <article *ngFor="let movie of matchedMovies" [class]="filmcontainer" (click)="renderMovieDetails(movie.title)">
-            <h2>{{movie.title}}</h2>
+            <h2 class="animate__animated animate__fadeInDown animate__delay-1s">{{movie.title}}</h2>
 
-            <img src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
+            <img class="animate__animated animate__fadeIn" src="{{movie.poster}}" alt="movie poster of {{movie.title}}">
 
         </article>
-
 
 
     </section>
 
     <section class="detailsContainer" *ngIf="detailsContainerStatus">
 
-        <div class="detailsPoster">
+        <div class="detailsPoster animate__animated animate__fadeIn">
 
             <img src="{{detailedMovie.poster}}" alt="movie poster of {{detailedMovie.title}}">
 
         </div>
 
-        <aside class="detailsText">
+        <aside class="detailsText animate__animated animate__fadeIn">
 
-            <h2 class="animate__animated animate__bounce">{{detailedMovie.title}}</h2>
+            <h2 >{{detailedMovie.title}}</h2>
 
             <div class="line"></div>
 
