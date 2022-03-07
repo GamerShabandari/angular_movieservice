@@ -103,7 +103,7 @@ header {
     height: fit-content;
     width: 100vw;
     
-    background-color: rgba(0, 0, 0, 0.692);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 20px;
 }
 
@@ -119,7 +119,6 @@ header {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
     font-size: 1rem;
-    background-image: linear-gradient(0deg, #0c0e0eef 0%, #f3f3f300 100%);
 }
 
 .filmcontainer{
@@ -133,16 +132,14 @@ header {
     gap: 10px;
     width: 200px;
     height: 310px;
-    padding: 15px;
+    padding: 0px;
     overflow: hidden;
     border-radius: 15px;
-    background-image: linear-gradient(0deg, #0c0e0ee7 0%, #f3f3f31e 100%);
     transition: all;
     transition-duration: 0.3s;
 
     &:hover {
         scale: 1.1;
-        background-image: linear-gradient(0deg, #0c0e0ee7 0%, #f3f3f39c 100%);
     }
 
     & img {
@@ -176,7 +173,7 @@ header {
     color: azure;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    background-image: linear-gradient(0deg, #0c0e0eef 0%, #f3f3f300 100%);
+    background-color: rgba(0, 0, 0, 0.7);
 
     & .detailsPoster {
         display: flex;
@@ -185,8 +182,7 @@ header {
         height: 100%;
         border-radius: 15px;
         overflow: hidden;
-        transition: all;
-        transition-duration: 0.3s;
+    
     }
 
     & .detailsText {
@@ -196,7 +192,6 @@ header {
         align-items: center;
         max-width: 40%;
         max-height: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
         border-radius: 15px;
 
         .line{

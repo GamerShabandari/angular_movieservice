@@ -7,10 +7,12 @@
 
 <main>
 
-    
+
     <section class="searchContainer">
-        <input class="animate__animated animate__zoomIn animate__delay-1s" #searchInput type="text" placeholder="search movie title">
-        <button class="animate__animated animate__zoomIn animate__delay-1s" (click)="movieSearch(searchInput.value)">🔍</button>
+        <input class="animate__animated animate__zoomIn animate__delay-1s" #searchInput type="text"
+            placeholder="search movie title">
+        <button class="animate__animated animate__zoomIn animate__delay-1s"
+            (click)="movieSearch(searchInput.value)">🔍</button>
     </section>
 
 
@@ -45,7 +47,7 @@
 
         <aside class="detailsText animate__animated animate__fadeIn">
 
-            <h2 >{{detailedMovie.title}}</h2>
+            <h2>{{detailedMovie.title}}</h2>
 
             <div class="line"></div>
 
@@ -75,6 +77,6 @@
         </aside>
 
     </section>
-    
+
 
 </main>
