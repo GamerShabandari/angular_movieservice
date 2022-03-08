@@ -85,7 +85,7 @@ header {
         transition-duration: 0.3s;
 
         &:hover {
-            scale: 1.1;
+            transform: scale(1.1);
             background-color: rgb(195, 202, 202);
 
         }
@@ -139,7 +139,8 @@ header {
     transition-duration: 0.3s;
 
     &:hover {
-        scale: 1.1;
+        //scale: 1.1;
+        transform: scale(1.1);
     }
 
     & img {
